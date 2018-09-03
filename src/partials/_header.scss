@@ -1,0 +1,80 @@
+header {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 3fr;
+  grid-gap: 2rem;
+  justify-content: space-between;
+  text-align: left;
+  width: 80vw;
+  margin: 0 auto;
+  grid-template-areas: "header1 header2 header3" "logo1 logo2 logo3";
+  h1 {
+    margin: 0;
+    display: inline-block;
+  }
+  h2 {
+    @include zineStyleFont(3vw);
+    line-height: 1.8rem;
+    margin: 0;
+    padding: 0.3rem 0;
+  }
+
+  .logo {
+    grid-area: logo1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    z-index: 10;
+    background-color: #d4ffdc;
+    background-image: url("http://100daysoffonts.com/images/natural-paper.png");
+    border-radius: 50%;
+    width: 15rem;
+    position: relative;
+    height: 15rem;
+  }
+  .info {
+    grid-area: logo2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    height: 15rem;
+    justify-content: center;
+  }
+  .post {
+    grid-area: logo3;
+    display: flex;
+    justify-content: center;
+    height: 15rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-items: center;
+    &__h1 {
+      display: inline-block;
+      line-height: 3rem;
+    }
+    a {
+      background-color: #fed2f6;
+      background-image: url("http://100daysoffonts.com/images/natural-paper.png");
+      padding: 0.3rem;
+      &:hover {
+        background-color: #d4ffdc;
+      }
+    }
+  }
+  .small {
+    padding-bottom: 2vh;
+  }
+
+  @media (max-width: 1040px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    padding: 2.5rem;
+  }
+}
